@@ -1,8 +1,9 @@
 ﻿using System;
 using System.IO;
 
-namespace printOnFilewatch
+namespace DirPrintWatcher
 {
+    
     class DirPrintWatcher
     {
         private WatcherPrintStack ps;
@@ -18,7 +19,7 @@ namespace printOnFilewatch
         }
 
         public void Start()
-        {
+        {            
             fsw = new FileSystemWatcher()
             {
                 Path = Settings.WatcherDirectory,
@@ -29,13 +30,12 @@ namespace printOnFilewatch
             fsw.Created += (s, e) => ps.AddFile(e.FullPath);
             fsw.Changed += (s, e) => ps.AddFile(e.FullPath);
 
-            fsw.EnableRaisingEvents = true;
+            fsw.EnableRaisingEvents = true;            
         }
 
         public void Stop()
         {
             fsw.Dispose();      
         }
-
     }    
 }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace printOnFilewatch.Properties {
+namespace DirPrintWatcher.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,42 +26,15 @@ namespace printOnFilewatch.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("EPSON TM-S9000 Roll Paper")]
-        public string PrinterName {
+        public string WinPrinterName {
             get {
-                return ((string)(this["PrinterName"]));
+                return ((string)(this["WinPrinterName"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Courier")]
-        public string Font {
-            get {
-                return ((string)(this["Font"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("11")]
-        public float FontSize {
-            get {
-                return ((float)(this["FontSize"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Bold")]
-        public string FontStyle {
-            get {
-                return ((string)(this["FontStyle"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("C:\\temp")]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\ProgramData\\DirPrintWatcher")]
         public string WatcherDirectory {
             get {
                 return ((string)(this["WatcherDirectory"]));
@@ -70,7 +43,7 @@ namespace printOnFilewatch.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("*.txt")]
+        [global::System.Configuration.DefaultSettingValueAttribute("*.*")]
         public string FileFilter {
             get {
                 return ((string)(this["FileFilter"]));
@@ -83,6 +56,51 @@ namespace printOnFilewatch.Properties {
         public string HeaderLogo {
             get {
                 return ((string)(this["HeaderLogo"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("63 30 08")]
+        public string ValidatorHexBytes {
+            get {
+                return ((string)(this["ValidatorHexBytes"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("COM2")]
+        public string SerialPort {
+            get {
+                return ((string)(this["SerialPort"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int Keep {
+            get {
+                return ((int)(this["Keep"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Microsoft Sans Serif, 11pt, style=Bold")]
+        public global::System.Drawing.Font WinFont {
+            get {
+                return ((global::System.Drawing.Font)(this["WinFont"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int WinRemoveLines {
+            get {
+                return ((int)(this["WinRemoveLines"]));
             }
         }
     }

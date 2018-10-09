@@ -2,12 +2,13 @@
 using System.IO;
 using Topshelf;
 
-namespace printOnFilewatch
+namespace DirPrintWatcher
 {
     class Program
     {
         static void Main(string[] args)
         {
+            
             var service = HostFactory.New(x =>
             {
                 x.Service<DirPrintWatcher>(s =>
@@ -22,17 +23,18 @@ namespace printOnFilewatch
                 x.SetServiceName("DirPrintWatcher");
 
                 x.StartAutomatically();
-
                 x.EnableServiceRecovery(r =>
                 {
                     r.RestartService(0);
                 });
+
+                x.DependsOn("Spooler");
             });
 
             var runner = service.Run();
 
             var exitCode = (int)Convert.ChangeType(runner, runner.GetTypeCode());
-            Environment.ExitCode = exitCode;
+            Environment.ExitCode = exitCode;            
         }       
       
     }         

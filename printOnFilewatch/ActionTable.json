@@ -1,0 +1,11 @@
+//Values for possible actions
+//Default = 0, MultiTranStart = 1, MultiTranEnd = 2, 
+//Print = 3, PrintAndCut = 4, Cut = 5, Ignore = 6, 
+//ValidatorPrint = 7
+{
+	"         Cash In/Out Listing":3,
+	"         HORIZON Teller Balance":3,
+	"         Counted Cash Listing":4,
+	"Begin MTS":1,
+	"End MTS":2
+}
